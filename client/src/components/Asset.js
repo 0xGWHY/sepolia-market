@@ -23,6 +23,10 @@ export const Asset = ({ map }) => {
     setIsListed(data);
   };
 
+  useEffect(() => {
+    listingCheck();
+  }, []);
+
   const listingFunc = async (tokenId, price) => {
     if (price === 0) {
       return;
